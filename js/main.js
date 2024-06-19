@@ -36,7 +36,7 @@ const images = [
     }
 ];
 
-
+console.log(images);
 
 // seleziono il contenitore
 const itemsContainer = document.querySelector(".items-container")
@@ -49,12 +49,14 @@ for (let i = 0; i < images.length; i++){
     // creare ad ogni iterazione l'elemento da inserire
         let itemContent = `
         <div class="item">
-            <img src="${itemImg.image}" alt="${itemImg.title}">
-            <h2>${itemImg.title}</h2>
-            <p>${itemImg.text}</p>
-        </div> 
-    `;
-           
+             <img src="${itemImg.image}" alt="${itemImg.title}">
+            <div class="caption">
+                <h2>${itemImg.title}</h2>
+                <p>${itemImg.text}</p>
+            </div>
+         </div> 
+     `;
+        
     //  inseriamo il nuovo elemento nel contenitore selezionato precedentemente
     itemsContainer.innerHTML += itemContent;    
 }
